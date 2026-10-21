@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA TLC | Tu mundo gamer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pantalla de Intro Cinemática -->
+    <div id="introScreen" class="intro-overlay">
+        <div class="geometric-shapes">
+            <div class="shape s1"></div>
+            <div class="shape s2"></div>
+            <div class="shape s3"></div>
+        </div>
+        <div class="intro-content">
+            <h1 class="geometry-title">GAME<span>TLC</span></h1>
+            <p class="geometry-subtitle">GET OUT OF MY HEAD</p>
+            <button id="enterBtn" class="geometry-btn">▶ PRESS START</button>
+        </div>
+        <div class="scanlines"></div>
+    </div>
+
+    <!-- Fondo dinámico con gradiente vertical y formas -->
+    <div class="bg-gradient-container">
+        <div class="geo-item square" style="left: 10%; width: 50px; height: 50px; animation-duration: 9s;"></div>
+        <div class="geo-item triangle" style="left: 25%; animation-duration: 12s; animation-delay: -2s;"></div>
+        <div class="geo-item square" style="left: 45%; width: 35px; height: 35px; animation-duration: 7s; animation-delay: -4s;"></div>
+        <div class="geo-item triangle" style="left: 60%; animation-duration: 11s; animation-delay: -1s;"></div>
+        <div class="geo-item square" style="left: 75%; width: 60px; height: 60px; animation-duration: 13s; animation-delay: -5s;"></div>
+        <div class="geo-item triangle" style="left: 90%; animation-duration: 10s; animation-delay: -3s;"></div>
+    </div>
+
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="logo">⛏️ Game<span>TLC</span></div>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#juegos">Juegos</a>
+            <a href="#comunidad">Comunidad</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="minecraft-title">TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</h1>
+            <p class="hero-subtitle">Explora. Juega. Conquista.</p>
+            <p class="hero-desc">Descubre títulos increíbles, gestiona tus aplicaciones de juego favoritas y vive la verdadera experiencia gamer en un entorno épico.</p>
+            <a href="#juegos" class="btn-primary">Explorar juegos <span class="arrow">↗</span></a>
+            <div class="hero-stats">
+                <div class="stat-badge">🔥 06 Apps Activas</div>
+                <div class="stat-badge">⚡ Servidor: 100% Online</div>
+                <div class="stat-badge">🎮 Modo Survival</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Explorar Juegos -->
+    <section id="juegos" class="games-section">
+        <div class="section-header">
+            <h2>Explora los juegos</h2>
+            <p class="section-desc">Busca, filtra y encuentra tu próxima aventura.</p>
+        </div>
+
+        <!-- Filtros y Búsqueda -->
+        <div class="filter-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar app o categoría...">
+                <button id="clearSearch">Limpiar</button>
+            </div>
+            <div class="category-buttons">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="accion">Acción</button>
+                <button class="filter-btn" data-category="aventura">Aventura</button>
+                <button class="filter-btn" data-category="carreras">Carreras</button>
+                <button class="filter-btn" data-category="estrategia">Estrategia</button>
+                <button class="filter-btn" data-category="deportes">Deportes</button>
+            </div>
+        </div>
+
+        <p class="games-counter">06 APPS DISPONIBLES</p>
+
+        <!-- Contenedor de Tarjetas de Juegos -->
+        <div class="games-grid" id="gamesGrid">
+
+            <!-- Geometry Dash -->
+            <div class="game-card" data-category="accion" data-name="geometry dash">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">🟩</span>
+                        <span class="app-id">App v2.204</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">RHYTHM PLATFORMER</span>
+                <span class="game-cat-label">Acción</span>
+                <h3>Geometry Dash</h3>
+                <p>Salta y vuela a través del peligro en este juego de plataformas basado en el ritmo.</p>
+                <div class="app-metrics">
+                    <span>⭐ 4.9 (5.2k)</span>
+                    <span>📥 500K Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">🔥 Ver Estado de Extreme Demons (Demon List)</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li><strong>#1 - Grief:</strong> Extreme Demon - 100.00% (Verificado por Doggy) ✅</li>
+                            <li><strong>#2 - Artemis:</strong> Extreme Demon - 100.00% (Verificado) ✅</li>
+                            <li><strong>#3 - Slaughtherhouse:</strong> Extreme Demon - 100.00% (Verificado) ✅</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="https://pointercrate.com/demonlist/" target="_blank" class="external-db-link">🔗 Ir a la Demon List Oficial ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                     <a href="https://play.google.com/store/apps/details?id=com.robtopx.geometryjumplite" target="_blank" class="play-btn">Ver juego ↗</a>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+            <!-- Brawl Stars -->
+            <div class="game-card" data-category="accion" data-name="brawl stars">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">⭐</span>
+                        <span class="app-id">App v54.2</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">MULTIPLAYER HERO SHOOTER</span>
+                <span class="game-cat-label">Acción</span>
+                <h3>Brawl Stars</h3>
+                <p>Batallas rápidas 3v3 y multijugador hechas para dispositivos móviles y acción total.</p>
+                <div class="app-metrics">
+                    <span>⭐ 4.8 (8.4k)</span>
+                    <span>📥 1M Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">🏆 Ver Top Mejores Jugadores del Mundo</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li>#1 - @Cursed (120,000 Trofeos - Récord mundial) 👑</li>
+                            <li>#2 - @Light (115,400 Trofeos) 🥈</li>
+                            <li>#3 - @Tensai (112,800 Trofeos) 🥉</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="https://brawlify.com/stats/leaderboards" target="_blank" class="external-db-link">🔗 Ver Ranking Global en Brawlify ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                    <a href="https://play.google.com/store/apps/details?id=com.supercell.brawlstars" target="_blank" class="play-btn">Ver juego ↗</a>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+            <!-- Hollow Knight -->
+            <div class="game-card" data-category="aventura" data-name="hollow knight">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">🦗</span>
+                        <span class="app-id">App v1.5.0</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">METROIDVANIA ADVENTURE</span>
+                <span class="game-cat-label">Aventura</span>
+                <h3>Hollow Knight</h3>
+                <p>Desciende a un vasto reino subterráneo de insectos y Héroes olvidados.</p>
+                <div class="app-metrics">
+                    <span>⭐ 5.0 (4.1k)</span>
+                    <span>📥 250K Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">👑 Ver Jefes Principales y Estado</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li>The Hollow Knight (Derrotado - 100%)</li>
+                            <li>Radiance / Absolute Radiance (Jefe Supremo - Superado)</li>
+                            <li>Pure Vessel (Panteón de Hallownest - Completado)</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="https://hollowknight.wiki/w/Hollow_Knight_Wiki" target="_blank" class="external-db-link">🔗 Ir a la Wiki Oficial ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                    <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" class="play-btn">Ver juego ↗</a>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+            <!-- Neon Racers -->
+            <div class="game-card" data-category="carreras" data-name="racing extreme">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">🏎️</span>
+                        <span class="app-id">App v3.1.2</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">RACING EXTREME</span>
+                <span class="game-cat-label">Carreras</span>
+                <h3>Neon Racers</h3>
+                <p>Corre a toda velocidad y conquista la pista.</p>
+                <div class="app-metrics">
+                    <span>⭐ 4.7 (2.1k)</span>
+                    <span>📥 80K Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">⚡ Ver Récords de Pista Globales</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li>Pista Cyber City: 1:12.45 (Récord: Apex)</li>
+                            <li>Pista Neon Highway: 0:58.12 (Récord: Viper)</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="#" class="external-db-link">🔗 Ver Tabla de Tiempos ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                    <button class="play-btn">Ver juego ↗</button>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+            <!-- Kingdom Tactics -->
+            <div class="game-card" data-category="estrategia" data-name="strategy">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">🛡️</span>
+                        <span class="app-id">App v1.0.5</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">STRATEGY</span>
+                <span class="game-cat-label">Estrategia</span>
+                <h3>Kingdom Tactics</h3>
+                <p>Construye tu reino y prepara la estrategia perfecta.</p>
+                <div class="app-metrics">
+                    <span>⭐ 4.9 (1.5k)</span>
+                    <span>📥 45K Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">🛡️ Ver Ligas y Gremios Top</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li>Gremio Imperium - Nivel 20 (1° Lugar Global)</li>
+                            <li>Gremio Valhalla - Nivel 19 (2° Lugar Global)</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="#" class="external-db-link">🔗 Ver Ranking de Gremios ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                 <a href="https://play.google.com/store/apps/details?id=com.freezenova.neonracer&hl=es_CO"target=></a>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+            <!-- Street Football -->
+            <div class="game-card" data-category="deportes" data-name="street sports">
+                <div class="app-header-bar">
+                    <div class="app-icon-title">
+                        <span class="app-logo">⚽</span>
+                        <span class="app-id">App v2.0.1</span>
+                    </div>
+                    <span class="app-status online">● En línea</span>
+                </div>
+                <span class="game-tag">STREET SPORTS</span>
+                <span class="game-cat-label">Deportes</span>
+                <h3>Street Football</h3>
+                <p>Demuestra tu talento y marca el gol de la victoria.</p>
+                <div class="app-metrics">
+                    <span>⭐ 4.6 (850)</span>
+                    <span>📥 30K Descargas</span>
+                </div>
+                <div class="extra-feature-box">
+                    <button class="toggle-extra-btn">⚽ Ver Torneo Callejero Actual</button>
+                    <div class="extra-content hidden-content">
+                        <ul>
+                            <li>Fase de Grupos: 32 Equipos Activos</li>
+                            <li>Máximo Goleador: @StreetKing (45 Goles)</li>
+                        </ul>
+                        <div class="external-link-wrap">
+                            <a href="#" class="external-db-link">🔗 Ver Detalles del Torneo ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="like-btn">♡ <span class="like-count">0</span></button>
+                    <button class="play-btn">Ver juego ↗</button>
+                </div>
+                <div class="comments-section">
+                    <p class="comments-title">Comentarios <span class="comment-count">0</span></p>
+                    <div class="comment-input-box">
+                        <input type="text" placeholder="¿Qué opinas de esta app?" class="comment-input">
+                        <button class="send-comment">➤</button>
+                    </div>
+                    <ul class="comment-list"></ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Comunidad / Footer -->
+    <section id="comunidad" class="community-section">
+        <div class="community-card-box">
+            <p class="small-tag">MÁS QUE JUGAR</p>
+            <h2>La comunidad gamer la haces tú.</h2>
+            <p>Descubre juegos, comparte opiniones y encuentra tu próxima aventura.</p>
+            <a href="#" class="community-link">Unirme a la aventura ↗</a>
+            <div class="footer-brand">
+                <p class="footer-logo">⛏️ NOVA TLC</p>
+                <p>Tu mundo gamer empieza aquí.</p>
+                <p class="copyright">© 2026 GameZen TLC</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
